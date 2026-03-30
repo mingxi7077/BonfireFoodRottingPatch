@@ -1,0 +1,20 @@
+main: com.puddingkc.BfrMain
+name: BonfireFoodRotting
+version: "1.1.0-fix3"
+api-version: "1.21"
+author: "PuddingKC"
+description: "Food rotting system for Minecraft (patched sync/lore compatibility)."
+depend:
+  - "NBTAPI"
+permissions:
+  bonfire.food.bypass:
+    description: Bypass food rotting effects
+    default: op
+  bonfire.food.reload:
+    description: Reload plugin configuration
+    default: op
+commands:
+  bfr:
+    description: Plugin main command
+    usage: /bfr
+    permission: bonfire.food.reload

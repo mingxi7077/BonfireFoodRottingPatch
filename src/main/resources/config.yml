@@ -1,0 +1,67 @@
+﻿#重载指令/bfr
+#拥有 bonfire.food.bypass 权限的人吃东西不受腐烂状态影响
+
+# 现实模拟增强（三倍时间版）
+# 1小时=60  1天=1440  1周=10080  1月(30天)=43200  1年=525600
+scan-interval-ticks: 40
+tracking:
+  # false: 创造模式不执行腐烂扫描，避免创造物品栏点击时物品消失/回滚
+  track-creative-mode: false
+stacking:
+  # true: 同状态且元数据一致的食材会自动并堆，减少碎格
+  merge-enabled: true
+  # 将创建时间按时间桶取整（秒）；0 表示严格原始时间
+  # 建议 300~900，值越大越容易堆叠
+  creation-time-bucket-seconds: 600
+
+bundle-protection:
+  # true: 白色收纳袋(或你配置的收纳袋材质)内食物暂停腐烂计时
+  enabled: true
+  # 1.21+ 可用 WHITE_BUNDLE / BUNDLE / 其它染色收纳袋
+  protected-materials:
+    - 'WHITE_BUNDLE'
+
+FoodList:
+  - 'BREAD:8640'                    # 面包 - 6天
+  - 'APPLE:30240'                   # 苹果 - 21天
+  - 'BAKED_POTATO:1440'             # 烤土豆 - 24小时
+  - 'BEEF:2160'                     # 生牛肉 - 36小时
+  - 'BEETROOT:30240'                # 甜菜根 - 21天
+  - 'BEETROOT_SOUP:720'             # 甜菜根汤 - 12小时
+  - 'CARROT:21600'                  # 胡萝卜 - 15天
+  - 'CHICKEN:2160'                  # 生鸡肉 - 36小时
+  - 'CHORUS_FRUIT:12960'            # 竖果 - 9天
+  - 'COD:1440'                      # 生鳕鱼 - 24小时
+  - 'COOKED_BEEF:4320'              # 熟牛肉 - 3天
+  - 'COOKED_CHICKEN:4320'           # 熟鸡肉 - 3天
+  - 'COOKED_COD:4320'               # 熟鳕鱼 - 3天
+  - 'COOKED_MUTTON:4320'            # 熟羊肉 - 3天
+  - 'COOKED_PORKCHOP:4320'          # 熟猪肉 - 3天
+  - 'COOKED_RABBIT:4320'            # 熟兔肉 - 3天
+  - 'COOKED_SALMON:4320'            # 熟鲑鱼 - 3天
+  - 'DRIED_KELP:129600'             # 干海带 - 90天
+  - 'ENCHANTED_GOLDEN_APPLE:777600' # 附魔金苹果 - 540天
+  - 'GOLDEN_APPLE:129600'           # 金苹果 - 90天
+  - 'GOLDEN_CARROT:129600'          # 金胡萝卜 - 90天
+  - 'HONEY_BOTTLE:1576800'          # 蜜瓶 - 1095天
+  - 'MELON_SLICE:1440'              # 西瓜片 - 24小时
+  - 'MUSHROOM_STEW:720'             # 蘑菇煲 - 12小时
+  - 'MUTTON:2160'                   # 生羊肉 - 36小时
+  - 'POISONOUS_POTATO:30240'        # 有毒马铃薯 - 21天
+  - 'PORKCHOP:2160'                 # 生猪肉 - 36小时
+  - 'POTATO:60480'                  # 土豆 - 42天
+  - 'PUMPKIN_PIE:8640'              # 南瓜派 - 6天
+  - 'RABBIT:2160'                   # 生兔肉 - 36小时
+  - 'RABBIT_STEW:720'               # 兔肉汤 - 12小时
+  - 'ROTTEN_FLESH:180'              # 腐肉 - 3小时
+  - 'SALMON:1440'                   # 生鲑鱼 - 24小时
+  - 'SWEET_BERRIES:1440'            # 甜浆果 - 24小时
+  - 'TROPICAL_FISH:720'             # 热带鱼 - 12小时
+
+lore:
+  # 与 LiteCooking 严格比对兼容：食材状态行必须写入
+  write-state-line: true
+  # 颜色请使用 1.16+ 兼容写法：&x&R&R&G&G&B&B（本插件仅做 & -> § 替换）
+  fresh: "&x&A&6&9&D&8&A食物状态: &x&B&7&C&5&A&3新鲜"
+  spoiled: "&x&A&6&9&D&8&A食物状态: &x&C&8&A&D&7&E变质"
+  rotten: "&x&A&6&9&D&8&A食物状态: &x&C&7&A&7&A&0腐烂"
