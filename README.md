@@ -1,6 +1,7 @@
 # BonfireFoodRottingPatch
 
-![License](https://img.shields.io/badge/license-GPL--3.0-blue)
+![License](https://img.shields.io/badge/license-BNSL--1.0-red)
+![Commercial Use](https://img.shields.io/badge/commercial-use%20by%20written%20permission%20only-critical)
 ![Platform](https://img.shields.io/badge/platform-Paper%201.21.x-brightgreen)
 ![Dependency](https://img.shields.io/badge/dependency-NBTAPI-blueviolet)
 ![Status](https://img.shields.io/badge/status-patched-success)
@@ -27,4 +28,6 @@ BonfireFoodRottingPatch is the maintained patch branch of Bonfire's food rotting
 
 ## License
 
-GPL-3.0
+Bonfire Non-Commercial Source License 1.0
+
+Commercial use is prohibited unless you first obtain written permission from `mingxi7707@qq.com`.
