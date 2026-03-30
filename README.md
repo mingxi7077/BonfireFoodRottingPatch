@@ -8,6 +8,8 @@
 
 BonfireFoodRottingPatch is the maintained patch branch of Bonfire's food rotting system, focused on stable state sync and lore compatibility.
 
+> Non-commercial source-available. Commercial use requires prior written permission via `mingxi7707@qq.com`.
+
 ## Highlights
 
 - Tracks fresh and rotten item states through plugin-managed metadata.
